@@ -227,8 +227,9 @@ GameObject:
   - component: {fileID: 622776591}
   - component: {fileID: 622776594}
   - component: {fileID: 622776595}
+  - component: {fileID: 622776596}
   m_Layer: 0
-  m_Name: BirdHero_0
+  m_Name: Bird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -400,6 +401,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98fab842f339888469ab9f2ae4a53c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upForce: 200
+--- !u!95 &622776596
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622776590}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a955913832aeb944c8b745ba4bc5101f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1187807746
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,8 +449,8 @@ Transform:
   m_GameObject: {fileID: 1187807746}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.43, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.06, y: 2.43, z: 0}
+  m_LocalScale: {x: 1.1045984, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2078495287}
@@ -563,8 +586,8 @@ Transform:
   m_GameObject: {fileID: 2078495285}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.43, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.0086, y: -2.43, z: 0}
+  m_LocalScale: {x: 1.1029171, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1187807747}
