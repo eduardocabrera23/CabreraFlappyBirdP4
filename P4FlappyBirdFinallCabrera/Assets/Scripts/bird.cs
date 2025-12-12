@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bird : MonoBehaviour { 
+public class bird : MonoBehaviour
+{
 
 
     public float upForce = 200f;
@@ -14,7 +15,7 @@ public class bird : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
-      rb2d = GetComponent<Rigidbody2D> ();
+        rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
@@ -23,19 +24,20 @@ public class bird : MonoBehaviour {
     {
         if (isDead == false)
         {
-            if (Input.GetMouseButtonDown (0))
+            if (Input.GetMouseButtonDown(0))
             {
                 rb2d.velocity = Vector2.zero;
-                rb2d.AddForce (new Vector2 (0, upForce));
+                rb2d.AddForce(new Vector2(0, upForce));
                 anim.SetTrigger("Flap");
 
             }
         }
     }
 
-    void onCollisionEnter2D()
+    void OnCollisionEnter2D()
     {
         isDead = true;
         anim.SetTrigger("Die");
+        GameControl.instance.BirdDied();
     }
 }
