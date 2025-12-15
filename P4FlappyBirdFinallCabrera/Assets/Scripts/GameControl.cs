@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagment;
+using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
@@ -20,7 +20,7 @@ public class GameControl : MonoBehaviour
         }
         else if (instance != this)
         {
-            Destroy(GameControl);
+            Destroy(gameObject);
         }
 
     }
@@ -28,16 +28,16 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameOver == true && Input.GetMouseButtonDown(0))
+        if (gameOver == true && Input.GetMouseButtonDown (0))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
         }
 
     }
 
     public void BirdDied()
     {
-        gameOverText.SetActive(true);
+        gameOverText.SetActive (true);
         gameOver = true;
     }
 }
